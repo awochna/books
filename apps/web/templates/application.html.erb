@@ -1,9 +1,13 @@
 <!doctype HTML>
 <html>
   <head>
-    <title>Web</title>
+    <title>Books</title>
+    <%= stylesheet 'app' %>
+    <%= javascript 'modernizr' %>
   </head>
   <body>
+    <%= render partial: 'partials/topbar' %>
     <%= yield %>
+    <%= javascript 'jquery.min', 'foundation.min', 'app' %>
   </body>
 </html>

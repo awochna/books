@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/lotus/assets.git
+  revision: c8a9bfcb77a67db200e29f6b6d5f5fdc1dabe2ae
+  specs:
+    lotus-assets (0.1.0)
+      lotus-utils (~> 0.5)
+      tilt (~> 2.0, >= 2.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -12,6 +20,8 @@ GEM
     dotenv (2.0.2)
     ffi (1.9.10)
     formatador (0.2.5)
+    foundation (1.0.4)
+      thor (>= 0.18.1)
     guard (2.13.0)
       formatador (>= 0.2.4)
       listen (>= 2.7, <= 4.0)
@@ -94,6 +104,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.3.0)
     rspec-support (3.3.0)
+    sass (3.4.17)
     sequel (4.26.0)
     shellany (0.0.1)
     shotgun (0.9.1)
@@ -112,9 +123,12 @@ PLATFORMS
 DEPENDENCIES
   bundler
   capybara
+  foundation
   guard-rspec
+  lotus-assets!
   lotus-model (~> 0.4)
   lotusrb (= 0.4.1)
   pg
   rake
   rspec
+  sass

@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="large-12 columns">
+    <h1>My book list:</h1>
+  </div>
+</div>
+<% books.each do |book| %>
+  <div class="book row" data-equalizer>
+    <div class="medium-5 columns" data-equalizer-watch>
+      <div class="title"><%= book.title %></div>
+      <div class="author"><%= book.author %></div>
+    </div>
+    <div class="medium-6 columns" data-equalizer-watch>
+      <div class="percent-read">
+        <p class="text-center">Progress: <%= book.percent_read %>%</p>
+      </div>
+      <div class="progress">
+        <span class="meter" style="width: <%= book.percent_read %>%"></span>
+      </div>
+    </div>
+  </div>
+<% end %>

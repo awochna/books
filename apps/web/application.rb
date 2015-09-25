@@ -1,4 +1,6 @@
 require 'lotus/helpers'
+require 'lotus/assets'
+require 'lotus/assets/helpers'
 
 module Web
   class Application < Lotus::Application
@@ -122,7 +124,7 @@ module Web
       # Enabling serving assets
       # Defaults to false
       #
-      # serve_assets false
+      serve_assets true
 
       ##
       # SECURITY
@@ -226,5 +228,30 @@ module Web
       # host   'example.org'
       # port   443
     end
+  end
+end
+
+Lotus::Assets.configure do
+  compile true
+
+  destination 'apps/web/public'
+
+  define :stylesheet do
+    sources << [
+      'apps/web/vendor/foundation/scss',
+      'apps/web/stylesheets',
+    ]
+  end
+  
+  define :javascript do
+    sources << [
+      'apps/web/vendor/fastclick',
+      'apps/web/vendor/foundation/js',
+      'apps/web/vendor/jquery',
+      'apps/web/vendor/jquery-placeholder',
+      'apps/web/vendor/jquery.cookie',
+      'apps/web/vendor/modernizr',
+      'apps/web/javascripts',
+    ]
   end
 end

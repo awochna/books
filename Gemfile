@@ -6,6 +6,9 @@ gem 'rake'
 gem 'lotusrb',       '0.4.1'
 gem 'lotus-model',   '~> 0.4'
 
+gem 'sass'
+gem 'lotus-assets', git: 'https://github.com/lotus/assets.git'
+gem 'foundation'
 
 gem 'pg'
 
